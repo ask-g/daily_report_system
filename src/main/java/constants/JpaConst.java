@@ -9,7 +9,7 @@ public interface JpaConst {
     String PERSISTENCE_UNIT_NAME="daily_report_system";
 
     //データ取得件数の最大値
-    int ROW_PRE_PAGE =15;
+    int ROW_PER_PAGE =15;
 
     //従業員テーブル
     String TABLE_EMP="employees";
@@ -36,7 +36,7 @@ public interface JpaConst {
     String REP_COL_ID="id";//id
     String REP_COL_EMP="emloyee_id";//日報を作成した従業員のid
     String REP_COL_REP_DATE="report_date";//いつの日報かを示す日付
-    String REP_COL_REP_TITLE="title";//日報のタイトル
+    String REP_COL_TITLE="title";//日報のタイトル
     String REP_COL_CONTENT="content";//日報の内容
     String REP_COL_CREATED_AT="created_at";//登録日時
     String REP_COL_UPDATED_AT="updated_at";//更新日時
@@ -54,7 +54,7 @@ public interface JpaConst {
     //NameQueryのnameとquery
     //すべての従業員をidの降順に取得する
     String Q_EMP_GET_ALL=ENTITY_EMP+".getAll";//name
-    String Q_EMP_GET_ALL_DEF="SELECT e FROM Eployee AS e ORDER BY e.id DESC";
+    String Q_EMP_GET_ALL_DEF="SELECT e FROM Employee AS e ORDER BY e.id DESC";
 
     //すべての従業員の件数を取得する
     String Q_EMP_COUNT=ENTITY_EMP+".count";
@@ -62,10 +62,10 @@ public interface JpaConst {
 
     //社員番号とハッシュ化済パスワードを条件に未削除の従業員を取得する
     String Q_EMP_GET_BY_CODE_AND_PASS=ENTITY_EMP+".getByCodeAndPass";
-    String Q_EMP_GET_BY_CODE_AND_PASS_DEF="SELECT e FROM Emloyee AS e WHERE e.deleteFlag_0 AND e.code= :"+JPQL_PARM_CODE+" AND e.password =:"+JPQL_PARM_PASSWORD;
+    String Q_EMP_GET_BY_CODE_AND_PASS_DEF="SELECT e FROM Emloyee AS e WHERE e.deleteFlag=0 AND e.code= :"+JPQL_PARM_CODE+" AND e.password =:"+JPQL_PARM_PASSWORD;
 
     //指定した社員番号を保持する従業員の件数を取得する
-    String Q_EMP_COUNT_RESISTERED_BY_COD=ENTITY_EMP+".countRegisteredByCode";
+    String Q_EMP_COUNT_RESISTERED_BY_CODE=ENTITY_EMP+".countRegisteredByCode";
     String Q_EMP_COUNT_RESISTERED_BY_CODE_DEF="SELECT COUNT(e) FROM Employee AS e WHERE e.code=:"+JPQL_PARM_CODE;
 
     //すべての日報をidの降順に取得する

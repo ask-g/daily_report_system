@@ -14,12 +14,12 @@ public enum ForwardConst {
     ACT_AUTH("Auth"),
 
     //command
-    CMD_("command"),
+    CMD("command"),
     CMD_NONE(""),
     CMD_INDEX("index"),
     CMD_SHOW("show"),
-    SMD_SHOW_LOGIN("showLogin"),
-    SMD_LOGIN("login"),
+    CMD_SHOW_LOGIN("showLogin"),
+    CMD_LOGIN("login"),
     CMD_LOGOUT("logout"),
     CMD_NEW("entryNew"),
     CMD_CREATE("create"),
@@ -28,7 +28,7 @@ public enum ForwardConst {
     CMD_DESTROY("destroy"),
 
     //jsp
-    FW_ERR_UNKNOWN("error/unkown"),
+    FW_ERR_UNKNOWN("error/unknown"),
     FW_TOP_INDEX("topPage/index"),
     FW_LOGIN("login/login"),
     FW_EMP_INDEX("employees/index"),

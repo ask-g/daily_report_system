@@ -4,20 +4,20 @@ public enum MessageConst {
 
 
     //認証
-    I_LOGINDE("ログインしました"),
+    I_LOGINED("ログインしました"),
     E_LOGINED("ログインに失敗しました"),
     I_LOGOUT("ログアウトしました"),
 
     //DB更新
     I_REGISTERDE("登録が完了しました"),
     I_UPDATED("更新が完了しました"),
-    I_DELETER("削除が完了しました"),
+    I_DELETED("削除が完了しました"),
 
     //バリデーション
     E_NONAME("氏名を入力してください"),
     E_NOPASSWORD("パスワードを入力してください"),
     E_NOEMP_CODE("社員番号を入力してください"),
-    E_EMP_CODE_EXSIST("入力されて社員番号の情報はすでに存在しています"),
+    E_EMP_CODE_EXIST("入力されて社員番号の情報はすでに存在しています"),
     E_NOTITLE("タイトルと入力してください"),
     E_NOCONTENT("内容を入力してください");
 

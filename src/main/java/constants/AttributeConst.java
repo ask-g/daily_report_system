@@ -22,7 +22,7 @@ public enum AttributeConst {
     //従業員管理
     EMPLOYEE("employee"),
     EMPLOYEES("employees"),
-    EMP_COUNT("employee_count"),
+    EMP_COUNT("employees_count"),
     EMP_ID("id"),
     EMP_CODE("code"),
     EMP_PASS("password"),
@@ -40,7 +40,7 @@ public enum AttributeConst {
     //日報管理
     REPORT("report"),
     REPORTS("reports"),
-    REP_COUNT("report_count"),
+    REP_COUNT("reports_count"),
     REP_ID("id"),
     REP_DATE("report_date"),
     REP_TITLE("title"),
