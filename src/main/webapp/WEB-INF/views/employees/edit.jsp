@@ -19,13 +19,12 @@
             <c:import url="_form.jsp" />
         </form>
         <p>
-            <a href="#" onclick="confirmDestory();">この従業員情報を削除する</a>
+            <a href="#" onclick="confirmDestroy();">この従業員情報を削除する</a>
         </p>
         <form method="POST"
             action="<c:url value='?action=${action}&command=${commDel}'/>">
-            <input type="hidden" name="${AttributeConst.EMP_ID.getValue() }"
-                value="${employee.id}" /> <input type="hidden"
-                name="${AttributeConst.TOKEN.getValue() }" value="${_token}" />
+            <input type="hidden" name="${AttributeConst.EMP_ID.getValue() }" value="${employee.id}" />
+            <input type="hidden" name="${AttributeConst.TOKEN.getValue() }" value="${_token}" />
         </form>
         <script>
             function confirmDestroy() {

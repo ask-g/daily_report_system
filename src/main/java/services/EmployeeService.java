@@ -176,7 +176,7 @@ public class EmployeeService extends ServiceBase {
      * idを条件に従業員データを論理削除する
      * @param id
      */
-    public void festroy(Integer id) {
+    public void destroy(Integer id) {
         //idを条件に登録済みの従業員情報を取得する
         EmployeeView savedEmp=findOne(id);
         //更新日時に現在時刻を設定する
