@@ -9,7 +9,7 @@
 <c:set var="commUpd" value="${ForwardConst.CMD_UPDATE.getValue() }" />
 <c:set var="commDel" value="${ForwardConst.CMD_DESTROY.getValue()}" />
 
-<c:import url="WEB-INF/views/layout/app.jsp">
+<c:import url="/WEB-INF/views/layout/app.jsp">
     <c:param name="content">
 
         <h2>id : ${employee.id}の従業員情報 編集ページ</h2>
