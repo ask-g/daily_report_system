@@ -190,30 +190,30 @@ public class EmployeeService extends ServiceBase {
         update(savedEmp);
     }
 
-        /**
-         * 社員番号とパスワードを条件に検索し、データが取得できるかどうかで認証結果を返却する
-         * @param code 社員番号
-         * @param plainPass パスワード
-         * @param pepper pepper文字列
-         * @return 認証結果を返却す(成功:true 失敗:false)
-         */
+    /**
+     * 社員番号とパスワードを条件に検索し、データが取得できるかどうかで認証結果を返却する
+     * @param code 社員番号
+     * @param plainPass パスワード
+     * @param pepper pepper文字列
+     * @return 認証結果を返却す(成功:true 失敗:false)
+     */
+    public Boolean validateLogin(String code, String plainPass, String pepper) {
 
-        public Boolean validateLogin(String code,String plainPass,String pepper) {
+        boolean isValidEmployee = false;
+        if (code != null && !code.equals("") && plainPass != null && !plainPass.equals("")) {
+            EmployeeView ev = findOne(code, plainPass, pepper);
 
-            boolean isValidEmployee=false;
-            if(code!=null && !code.equals("")&&plainPass !=null&& !plainPass.equals("")) {
-                EmployeeView ev =findOne(code,plainPass,pepper);
+            if (ev != null && ev.getId() != null) {
 
-                if(ev!=null&&ev.getId()!=null) {
-                    //データが取得できた場合認証成功
-                    isValidEmployee =true;
-
-                }
+                //データが取得できた場合、認証成功
+                isValidEmployee = true;
             }
-            //認証結果を返却する
-            return isValidEmployee;
-
         }
+
+        //認証結果を返却する
+        return isValidEmployee;
+    }
+
         /**
          * idを条件にデータを1件取得し、Employeeのインスタンスで返却する
          * @param id
