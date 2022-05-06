@@ -72,7 +72,7 @@ public class LoginFilter implements Filter {
 
                 }
             } else {
-                //ログイン済み
+                //ログイン済
                 if (ForwardConst.ACT_AUTH.getValue().equals(action)) {
                     //認証系Actionを行おうとしている場合
 
@@ -88,7 +88,7 @@ public class LoginFilter implements Filter {
                         //ログアウトの実施は許可
                     } else {
                         //上記以外の認証系Actionはエラー画面
-                        String forward = String.format("/WEB-INF/views?%s.jsp", "error/unknown");
+                        String forward = String.format("/WEB-INF/views/%s.jsp", "error/unknown");
                         RequestDispatcher dispathcer = request.getRequestDispatcher(forward);
                         dispathcer.forward(request, response);
                         return;

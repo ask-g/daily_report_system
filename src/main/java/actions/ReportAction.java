@@ -187,6 +187,9 @@ public class ReportAction extends ActionBase{
      */
     public void update()throws ServletException,IOException{
         //CSRF対策のtokenのチェック
+        if(checkToken()) {
+
+            //idを条件に日報データを取得する
         ReportView rv=service.findOne(toNumber(getRequestParam(AttributeConst.REP_ID)));
 
         //入力された日報内容を設定する
@@ -212,7 +215,7 @@ public class ReportAction extends ActionBase{
 
             //一覧画面にリダイレクト
             redirect(ForwardConst.ACT_REP,ForwardConst.CMD_INDEX);
-
+        }
         }
     }
 }
