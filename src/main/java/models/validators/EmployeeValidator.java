@@ -102,9 +102,9 @@ public class EmployeeValidator {
      */
     private static String validatePassword(String password,Boolean passwordChechkFlag) {
 
-        //入力チェックを実施かつにゅうりょくちがなければエラーメッセージを返却
+        //入力チェックを実施かつ入力値がなければエラーメッセージを返却
         if(passwordChechkFlag &&(password ==null || password.equals(""))) {
-
+            return MessageConst.E_NOPASSWORD.getMessage();
         }
         //エラーがない場合は空文字を返却
         return "";
