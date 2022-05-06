@@ -66,7 +66,7 @@ button {
     padding: 5px 10px;
 }
 
-#fotter {
+#footer {
     text-align: center;
 }
 
@@ -114,8 +114,8 @@ select{
     height:30px;
 }
 
-#heder_menu{
-    width:57px;
+#header_menu{
+    width:57%;
     padding-top:17px;
     padding-left:3%;
     display:inline-block;
@@ -125,7 +125,7 @@ select{
     color:#cccccc;
     width:36%;
     padding-right:3%;
-    text-align:rigth;
+    text-align:right;
     display:inline-block;
 }
 
@@ -163,4 +163,7 @@ table#report_list .report_action{
 pre{
     font-family:"Hiragino Kaku Gothic Pro",Meiryo,"MS PGothic",Helvetica,Arial,sans-serif;
 }
+h3{
+    font-size:larger;
 }
+
