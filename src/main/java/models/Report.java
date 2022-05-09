@@ -73,7 +73,7 @@ public class Report {
     /**
      * 日報のタイトル
      */
-    @Column(name=JpaConst.REP_COL_TITLE,nullable=false)
+    @Column(name=JpaConst.REP_COL_TITLE,length=255,nullable=false)
     private String title;
 
     /**

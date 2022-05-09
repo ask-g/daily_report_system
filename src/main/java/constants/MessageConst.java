@@ -18,7 +18,7 @@ public enum MessageConst {
     E_NOPASSWORD("パスワードを入力してください"),
     E_NOEMP_CODE("社員番号を入力してください"),
     E_EMP_CODE_EXIST("入力されている社員番号の情報はすでに存在しています"),
-    E_NOTITLE("タイトルと入力してください"),
+    E_NOTITLE("タイトルを入力してください"),
     E_NOCONTENT("内容を入力してください");
 
     //文字列

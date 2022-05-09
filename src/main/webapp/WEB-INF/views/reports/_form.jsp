@@ -24,7 +24,7 @@
 <c:out value="${sessionScope.login_employee.name }"/>
 <br/><br/>
 
-<label for="${AttributeConst.REP_CONTENT.getValue() }">タイトル</label><br/>
+<label for="${AttributeConst.REP_TITLE.getValue() }">タイトル</label><br/>
 <input type="text" name="${AttributeConst.REP_TITLE.getValue() }" value="${report.title }"/>
 <br/><br/>
 
